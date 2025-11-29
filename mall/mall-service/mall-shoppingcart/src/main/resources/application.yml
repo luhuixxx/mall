@@ -1,0 +1,22 @@
+server:
+  port: 51804
+spring:
+  application:
+    name: mall-shoppingcart
+  config:
+    import:
+      - nacos:mall-shoppingcart
+      - nacos:mybatisplus
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.139.50:8848
+        namespace: b408564f-2510-49c8-93d2-ec1073ed43a3
+        file-extension: yaml
+        username: nacos
+        password: nacos123456
+      discovery:
+        server-addr: 192.168.139.50:8848
+        namespace: b408564f-2510-49c8-93d2-ec1073ed43a3
+        username: nacos
+        password: nacos123456

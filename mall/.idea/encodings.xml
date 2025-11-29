@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mall-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-feign-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/mall-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/mall-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/mall-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/shoppingcart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
