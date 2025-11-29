@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="" />
+    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/handler/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Sku.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Sku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Spu.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Spu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/EmployeeRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/EmployeeRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/RolePermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/MallProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/MallProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/MallUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/MallUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.5.14/mybatis-plus-extension-3.5.14.jar!/com/baomidou/mybatisplus/extension/plugins/MybatisPlusInterceptor.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.5.14/mybatis-plus-extension-3.5.14.jar!/com/baomidou/mybatisplus/extension/plugins/inner/InnerInterceptor.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -18,6 +54,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="userSettingsFile" value="D:\program\environment\apache-maven-3.9.11\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -39,10 +76,14 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MallGatewayApplication.executor": "Debug",
     "Spring Boot.MallOrderApplication.executor": "Run",
-    "Spring Boot.MallProductApplication.executor": "Run",
+    "Spring Boot.MallProductApplication.executor": "Debug",
     "Spring Boot.MallShoppingcartApplication.executor": "Run",
-    "Spring Boot.MallUserApplication.executor": "Run",
+    "Spring Boot.MallUserApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,7 +94,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true",
     "应用程序.MallUserApplicationTests.executor": "Run"
   },
@@ -63,6 +104,14 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.luxiao.mallproduct.config" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -77,7 +126,10 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="MallProductApplication" value="FAILED" />
+              <entry key="MallGatewayApplication" value="STOPPED" />
+              <entry key="MallOrderApplication" value="STOPPED" />
+              <entry key="MallProductApplication" value="STOPPED" />
+              <entry key="MallShoppingcartApplication" value="STOPPED" />
               <entry key="MallUserApplication" value="STOPPED" />
             </map>
           </value>
@@ -85,7 +137,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallShoppingcartApplication">
+  <component name="RunManager" selected="Spring Boot.MallGatewayApplication">
     <configuration name="MallUserApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luxiao.malluser.MallUserApplicationTests" />
       <module name="mall-user" />
@@ -156,11 +208,33 @@
       <option name="presentableId" value="Default" />
       <updated>1764385519814</updated>
       <workItem from="1764385521270" duration="7732000" />
-      <workItem from="1764400005533" duration="920000" />
+      <workItem from="1764400005533" duration="5586000" />
+      <workItem from="1764412009091" duration="411000" />
+      <workItem from="1764412430453" duration="471000" />
+      <workItem from="1764412914981" duration="1553000" />
+      <workItem from="1764415487888" duration="6976000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
