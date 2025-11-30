@@ -4,34 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/config/MyBatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/exception/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="更新user，security，gateway模块">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/luxiao/mallcommon/handler/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Sku.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Sku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Spu.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/Spu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/EmployeeRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/EmployeeRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/RolePermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/MallProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/MallProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/MallUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/MallUserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;luhuixxx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/luhuixxx/mall.git&quot;,
+    &quot;accountId&quot;: &quot;ae846aaf-02c9-4581-b7f5-7534b69cd097&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.5.14/mybatis-plus-extension-3.5.14.jar!/com/baomidou/mybatisplus/extension/plugins/MybatisPlusInterceptor.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.5.14/mybatis-plus-extension-3.5.14.jar!/com/baomidou/mybatisplus/extension/plugins/inner/InnerInterceptor.class" root0="SKIP_INSPECTION" />
@@ -100,6 +89,7 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
+      "redis",
       "mysql"
     ]
   }
@@ -137,7 +127,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.MallUserApplication">
     <configuration name="MallUserApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luxiao.malluser.MallUserApplicationTests" />
       <module name="mall-user" />
@@ -212,20 +202,35 @@
       <workItem from="1764412009091" duration="411000" />
       <workItem from="1764412430453" duration="471000" />
       <workItem from="1764412914981" duration="1553000" />
-      <workItem from="1764415487888" duration="6976000" />
+      <workItem from="1764415487888" duration="7201000" />
+      <workItem from="1764506182378" duration="4446000" />
     </task>
+    <task id="LOCAL-00001" summary="更新user，security，gateway模块">
+      <option name="closed" value="true" />
+      <created>1764426576373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764426576373</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新user，security，gateway模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新user，security，gateway模块" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint type="java-exception">
-          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
