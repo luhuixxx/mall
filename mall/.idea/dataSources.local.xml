@@ -28,17 +28,21 @@
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
-    <data-source name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" uuid="dd4020a9-18ac-4c6c-af22-c4d9f6752a74">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
-      <user-name>root</user-name>
-      <schema-mapping />
-    </data-source>
     <data-source name="0@192.168.139.50" uuid="85331db4-82fe-461c-943b-cd5b02dafedf">
       <database-info product="Redis Standalone" version="2.8.19" jdbc-version="4.2" driver-name="Redis JDBC Driver" driver-version="1.5" dbms="REDIS" exact-version="2.8.19" exact-driver-version="1.5">
         <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" uuid="4fbe3c36-8309-4ac0-8f0c-e1be5ea826e4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
       <schema-mapping />
     </data-source>
   </component>

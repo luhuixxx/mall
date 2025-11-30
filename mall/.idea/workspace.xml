@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="更新user，security，gateway模块">
+    <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="前端项目创建">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85331db4-82fe-461c-943b-cd5b02dafedf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85331db4-82fe-461c-943b-cd5b02dafedf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallUserApplication">
+  <component name="RunManager" selected="Spring Boot.MallGatewayApplication">
     <configuration name="MallUserApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luxiao.malluser.MallUserApplicationTests" />
       <module name="mall-user" />
@@ -203,7 +203,7 @@
       <workItem from="1764412430453" duration="471000" />
       <workItem from="1764412914981" duration="1553000" />
       <workItem from="1764415487888" duration="7201000" />
-      <workItem from="1764506182378" duration="4446000" />
+      <workItem from="1764506182378" duration="5874000" />
     </task>
     <task id="LOCAL-00001" summary="更新user，security，gateway模块">
       <option name="closed" value="true" />
@@ -213,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764426576373</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成员工登录">
+      <option name="closed" value="true" />
+      <created>1764510957591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764510957591</updated>
+    </task>
+    <task id="LOCAL-00003" summary="前端项目创建">
+      <option name="closed" value="true" />
+      <created>1764510991438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764510991438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,18 +237,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新user，security，gateway模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新user，security，gateway模块" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java</url>
-          <line>160</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="完成员工登录" />
+    <MESSAGE value="前端项目创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端项目创建" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
