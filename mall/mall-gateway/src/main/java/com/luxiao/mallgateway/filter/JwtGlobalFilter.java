@@ -18,6 +18,7 @@ import reactor.core.publisher.Mono;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.List;
+import com.luxiao.mallcommon.security.WhiteList;
 
 @Component
 public class JwtGlobalFilter implements GlobalFilter, Ordered {
@@ -25,16 +26,12 @@ public class JwtGlobalFilter implements GlobalFilter, Ordered {
     @Value("${security.jwt.secret}")
     private String secret;
 
-    private static final List<String> WHITELIST = List.of(
-            "/api/user/login",
-            "/api/employee/login",
-            "/api/user/register"
-    );
+    private static final List<String> WHITELIST = List.of(WhiteList.PATHS);
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getURI().getPath();
-        if (isWhitelisted(path)) {
+        if (WhiteList.matchesPrefix(path)) {
             return chain.filter(exchange);
         }
 
@@ -76,12 +73,7 @@ public class JwtGlobalFilter implements GlobalFilter, Ordered {
     }
 
     private boolean isWhitelisted(String path) {
-        for (String w : WHITELIST) {
-            if (path.startsWith(w)) {
-                return true;
-            }
-        }
-        return false;
+        return WhiteList.matchesPrefix(path);
     }
 
     private Mono<Void> unauthorized(ServerWebExchange exchange, String msg) {

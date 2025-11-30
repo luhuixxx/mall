@@ -14,6 +14,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
+import com.luxiao.mallcommon.security.WhiteList;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String path = request.getRequestURI();
-        if (isWhitelisted(path)) {
+        if (WhiteList.matchesPrefix(path)) {
             filterChain.doFilter(request, response);
             return;
         }
@@ -53,11 +54,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private boolean isWhitelisted(String path) {
-        return path.startsWith("/api/user/login") ||
-                path.startsWith("/api/user/register") ||
-                path.startsWith("/api/employee/login") ||
-                path.startsWith("/v3/api-docs") ||
-                path.startsWith("/swagger-ui");
+        return WhiteList.matchesPrefix(path);
     }
 
     private List<GrantedAuthority> buildAuthorities(String identity, String userId) throws JsonProcessingException {

@@ -17,6 +17,7 @@ import com.luxiao.malluser.mapper.UserMapper;
 import com.luxiao.malluser.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.luxiao.mallsecurity.crypto.RsaCrypto;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -26,6 +27,7 @@ import java.security.NoSuchAlgorithmException;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     private final StringRedisTemplate stringRedisTemplate;
+    private final RsaCrypto rsaCrypto;
 
     @Value("${security.jwt.secret}")
     private String jwtSecret;
@@ -33,8 +35,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Value("${security.jwt.ttl}")
     private long jwtTtlSeconds;
 
-    public UserServiceImpl(StringRedisTemplate stringRedisTemplate) {
+    public UserServiceImpl(StringRedisTemplate stringRedisTemplate, RsaCrypto rsaCrypto) {
         this.stringRedisTemplate = stringRedisTemplate;
+        this.rsaCrypto = rsaCrypto;
     }
 
     @Override
@@ -48,7 +51,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User u = new User();
         u.setName(req.getName());
         u.setUsername(req.getUsername());
-        u.setPassword(sha256(req.getPassword()));
+        String raw = rsaCrypto.decrypt(req.getPassword());
+        u.setPassword(sha256(raw));
         u.setEmail(req.getEmail());
         this.save(u);
         u.setPassword(null);
@@ -63,7 +67,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (u == null) {
             throw new IllegalArgumentException("用户不存在");
         }
-        String encoded = sha256(req.getPassword());
+        String raw = rsaCrypto.decrypt(req.getPassword());
+        String encoded = sha256(raw);
         if (!encoded.equals(u.getPassword())) {
             throw new IllegalArgumentException("密码不正确");
         }

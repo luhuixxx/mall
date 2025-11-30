@@ -19,6 +19,7 @@ import com.luxiao.malluser.mapper.RolePermissionMapper;
 import com.luxiao.malluser.mapper.PermissionMapper;
 import com.luxiao.malluser.service.EmployeeService;
 import com.alibaba.fastjson2.JSON;
+import com.luxiao.mallsecurity.crypto.RsaCrypto;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -42,6 +43,7 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     private final RolePermissionMapper rolePermissionMapper;
     private final PermissionMapper permissionMapper;
     private final StringRedisTemplate stringRedisTemplate;
+    private final RsaCrypto rsaCrypto;
 
     @Value("${security.jwt.secret}")
     private String jwtSecret;
@@ -53,12 +55,14 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
                                RoleMapper roleMapper,
                                RolePermissionMapper rolePermissionMapper,
                                PermissionMapper permissionMapper,
-                               StringRedisTemplate stringRedisTemplate) {
+                               StringRedisTemplate stringRedisTemplate,
+                               RsaCrypto rsaCrypto) {
         this.employeeRoleMapper = employeeRoleMapper;
         this.roleMapper = roleMapper;
         this.rolePermissionMapper = rolePermissionMapper;
         this.permissionMapper = permissionMapper;
         this.stringRedisTemplate = stringRedisTemplate;
+        this.rsaCrypto = rsaCrypto;
     }
 
     @Override
@@ -69,7 +73,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         if (emp == null) {
             throw new IllegalArgumentException("员工不存在");
         }
-        String encoded = sha256(req.getPassword());
+        String raw = rsaCrypto.decrypt(req.getPassword());
+        String encoded = sha256(raw);
         if (!encoded.equals(emp.getPassword())) {
             throw new IllegalArgumentException("密码不正确");
         }
@@ -100,7 +105,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         }
         Employee e = new Employee();
         e.setUsername(req.getUsername());
-        e.setPassword(sha256(req.getPassword()));
+        String raw = rsaCrypto.decrypt(req.getPassword());
+        e.setPassword(sha256(raw));
         this.save(e);
         e.setPassword(null);
         return e;

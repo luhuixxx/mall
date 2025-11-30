@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import com.luxiao.mallcommon.security.WhiteList;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,12 +25,7 @@ public class SecurityConfig {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
-    private String[] whiteList = new String[]{
-            "/api/user/login",
-            "/api/employee/login",
-            "/api/user/register",
-
-    };
+    private String[] whiteList = WhiteList.PATHS;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -40,7 +36,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.DELETE, "/api/product/**").hasAuthority("product:write")
                         .requestMatchers("/api/employee/**").hasRole("EMPLOYEE")
                         .requestMatchers("/api/order/**", "/api/shoppingcart/**").hasRole("USER")
-                        //.requestMatchers(whiteList).permitAll()
+                        .requestMatchers(whiteList).permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/product/**").permitAll()
                         .anyRequest().authenticated()
                 )
