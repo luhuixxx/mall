@@ -104,6 +104,7 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
             throw new IllegalArgumentException("用户名已存在");
         }
         Employee e = new Employee();
+        e.setId(generateEmployeeId());
         e.setUsername(req.getUsername());
         String raw = rsaCrypto.decrypt(req.getPassword());
         e.setPassword(sha256(raw));
@@ -122,6 +123,22 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         this.updateById(e);
         e.setPassword(null);
         return e;
+    }
+
+    @Override
+    public boolean removeEmployee(Long id) {
+        employeeRoleMapper.delete(new LambdaQueryWrapper<EmployeeRole>().eq(EmployeeRole::getEmployeeId, id));
+        return this.removeById(id);
+    }
+
+    @Override
+    public void resetPassword(Long id) {
+        Employee e = this.getById(id);
+        if (e == null) {
+            throw new IllegalArgumentException("员工不存在");
+        }
+        e.setPassword(sha256("123456"));
+        this.updateById(e);
     }
 
     private String generateToken(Employee e) {
@@ -171,6 +188,16 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         } catch (Exception e) {
             throw new RuntimeException("员工登录信息缓存失败", e);
         }
+    }
+
+    private Long generateEmployeeId() {
+        for (int i = 0; i < 10; i++) {
+            long id = 10000 + (long) (Math.random() * 90000);
+            if (this.getById(id) == null) {
+                return id;
+            }
+        }
+        throw new RuntimeException("生成员工ID失败");
     }
 
     private String sha256(String raw) {

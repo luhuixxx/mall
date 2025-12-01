@@ -22,7 +22,11 @@
     <schema id="15" parent="1" name="7"/>
     <schema id="16" parent="1" name="8"/>
     <schema id="17" parent="1" name="9"/>
-    <collection id="18" parent="2" name="security:rsa:private"/>
-    <collection id="19" parent="2" name="security:rsa:public"/>
+    <collection id="18" parent="2" name="auth:employee:1"/>
+    <collection id="19" parent="2" name="auth:employee:1:perms"/>
+    <collection id="20" parent="2" name="auth:employee:1:roles"/>
+    <collection id="21" parent="2" name="auth:token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbXA6MSIsInVzZXJuYW1lIjoiYWRtaW4iLCJpZGVudGl0eSI6IkVNUExPWUVFIiwidXNlcklkIjoiMSIsImlhdCI6MTc2NDU4NjAzMywiZXhwIjoxNzY0NTg5NjMzfQ.Wg2BcupqXqwXYLIsVeG1FZ3eGs9M-uDA-cLuiROAPt8"/>
+    <collection id="22" parent="2" name="security:rsa:private"/>
+    <collection id="23" parent="2" name="security:rsa:public"/>
   </database-model>
 </dataSource>

@@ -22,12 +22,10 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
-    private final RsaCrypto rsaCrypto;
 
 
-    public EmployeeController(EmployeeService employeeService, RsaCrypto rsaCrypto) {
+    public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
-        this.rsaCrypto = rsaCrypto;
     }
 
 
@@ -67,5 +65,20 @@ public class EmployeeController {
     @PreAuthorize("hasRole('EMPLOYEE')")
     public ResponseEntity<ApiResponse<Employee>> update(@PathVariable Long id, @Valid @RequestBody EmployeeUpdateReq req) {
         return ResponseEntity.ok(ApiResponse.ok(employeeService.updateProfile(id, req)));
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "删除员工")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    public ResponseEntity<ApiResponse<Boolean>> delete(@PathVariable Long id) {
+        return ResponseEntity.ok(ApiResponse.ok(employeeService.removeEmployee(id)));
+    }
+
+    @PostMapping("/{id}/reset-password")
+    @Operation(summary = "重置员工密码为123456")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long id) {
+        employeeService.resetPassword(id);
+        return ResponseEntity.ok(ApiResponse.ok(null));
     }
 }

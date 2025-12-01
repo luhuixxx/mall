@@ -35,10 +35,5 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" uuid="813974f0-acd7-4968-bde4-3e08f4e2f26c">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
-      <user-name>root</user-name>
-      <schema-mapping />
-    </data-source>
   </component>
 </project>

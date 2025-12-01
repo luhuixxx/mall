@@ -1655,7 +1655,6 @@ sku_id</ColNames>
       <UnderlyingIndexName>uk_user_sku</UnderlyingIndexName>
     </key>
     <column id="389" parent="307" name="id">
-      <AutoIncrement>2</AutoIncrement>
       <Comment>主键ID</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>

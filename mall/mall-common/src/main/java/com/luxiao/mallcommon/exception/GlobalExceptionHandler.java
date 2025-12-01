@@ -37,4 +37,3 @@ public class GlobalExceptionHandler {
         return ResponseEntity.internalServerError().body(ApiResponse.error("服务器错误"));
     }
 }
-

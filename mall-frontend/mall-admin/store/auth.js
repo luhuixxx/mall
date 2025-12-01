@@ -29,11 +29,6 @@ export const useAuthStore = defineStore('auth', {
         if (e) this.employee = e
         if (r) this.roles = r
         if (p) this.permissions = p
-        if (this.token) {
-          request.defaults.headers = request.defaults.headers || {}
-          request.defaults.headers.common = request.defaults.headers.common || {}
-          request.defaults.headers.common.Authorization = 'Bearer ' + this.token
-        }
       } catch (e) {}
     },
     async fetchPublicKey() {
@@ -59,9 +54,6 @@ export const useAuthStore = defineStore('auth', {
         uni.setStorageSync(storageKeys.roles, this.roles)
         uni.setStorageSync(storageKeys.permissions, this.permissions)
       } catch (e) {}
-      request.defaults.headers = request.defaults.headers || {}
-      request.defaults.headers.common = request.defaults.headers.common || {}
-      request.defaults.headers.common.Authorization = 'Bearer ' + this.token
       return data
     },
     logout() {
@@ -76,9 +68,7 @@ export const useAuthStore = defineStore('auth', {
         uni.removeStorageSync(storageKeys.roles)
         uni.removeStorageSync(storageKeys.permissions)
       } catch (e) {}
-      if (request.defaults.headers && request.defaults.headers.common) {
-        delete request.defaults.headers.common.Authorization
-      }
+      // headers 由请求封装按需附加，无需手动移除
     }
   }
 })

@@ -13,4 +13,6 @@ public interface EmployeeService extends IService<Employee> {
     Page<Employee> pageEmployees(int page, int size, String username);
     Employee register(EmployeeRegisterReq req);
     Employee updateProfile(Long id, EmployeeUpdateReq req);
+    boolean removeEmployee(Long id);
+    void resetPassword(Long id);
 }
