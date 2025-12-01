@@ -1078,25 +1078,25 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="289" parent="1" name="mall_order">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-30.13:45:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="mall_product">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-30.13:45:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="mall_shopping_cart">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-30.13:45:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="mall_user">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-30.13:45:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="mysql">
@@ -1105,7 +1105,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="294" parent="1" name="nacos">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-30.13:45:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="performance_schema">
@@ -1818,13 +1818,11 @@ role_id</ColNames>
     </column>
     <column id="416" parent="309" name="created_user">
       <Comment>创建人</Comment>
-      <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
     <column id="417" parent="309" name="updated_user">
       <Comment>更新人</Comment>
-      <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
@@ -1945,13 +1943,11 @@ role_id</ColNames>
     </column>
     <column id="438" parent="311" name="created_user">
       <Comment>创建人</Comment>
-      <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
     <column id="439" parent="311" name="updated_user">
       <Comment>更新人</Comment>
-      <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>

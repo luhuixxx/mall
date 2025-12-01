@@ -3,6 +3,7 @@ package com.luxiao.malluser.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.luxiao.mallcommon.api.ApiResponse;
 import com.luxiao.mallmodel.user.Employee;
+import com.luxiao.mallsecurity.crypto.RsaCrypto;
 import com.luxiao.malluser.dto.EmployeeLoginReq;
 import com.luxiao.malluser.dto.EmployeeLoginResp;
 import com.luxiao.malluser.service.EmployeeService;
@@ -21,10 +22,14 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
+    private final RsaCrypto rsaCrypto;
 
-    public EmployeeController(EmployeeService employeeService) {
+
+    public EmployeeController(EmployeeService employeeService, RsaCrypto rsaCrypto) {
         this.employeeService = employeeService;
+        this.rsaCrypto = rsaCrypto;
     }
+
 
     @PostMapping("/login")
     @Operation(summary = "员工登录")

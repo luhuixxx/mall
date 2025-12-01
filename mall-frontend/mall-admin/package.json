@@ -1,0 +1,13 @@
+{
+  "name": "mall-admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "vue": "^3.4.0",
+    "pinia": "^2.1.7",
+    "axios": "^1.6.8",
+    "element-plus": "^2.8.5",
+    "jsencrypt": "^3.3.2"
+  }
+}

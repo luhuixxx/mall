@@ -48,6 +48,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (Exception e) {
                 SecurityContextHolder.clearContext();
+                response.setStatus(401);
+                response.setContentType("application/json;charset=UTF-8");
+                response.getWriter().write("{\"code\":401,\"message\":\"unauthorized\"}");
+                return;
             }
         }
         filterChain.doFilter(request, response);
@@ -61,16 +65,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if ("EMPLOYEE".equalsIgnoreCase(identity)) {
             String rolesJson = stringRedisTemplate.opsForValue().get("auth:employee:" + userId + ":roles");
             String permsJson = stringRedisTemplate.opsForValue().get("auth:employee:" + userId + ":perms");
-            List<String> roles = rolesJson != null ? new ObjectMapper().readValue(rolesJson, new TypeReference<List<String>>() {}) : List.of();
-            List<String> perms = permsJson != null ? new ObjectMapper().readValue(permsJson, new TypeReference<List<String>>() {}) : List.of();
+            if (rolesJson == null || permsJson == null) {
+                throw new IllegalStateException("unauthenticated");
+            }
+            List<String> roles = new ObjectMapper().readValue(rolesJson, new TypeReference<List<String>>() {});
+            List<String> perms = new ObjectMapper().readValue(permsJson, new TypeReference<List<String>>() {});
             List<GrantedAuthority> auths = roles.stream().map(r -> new SimpleGrantedAuthority("ROLE_" + r.toUpperCase())).collect(Collectors.toList());
             auths.add(new SimpleGrantedAuthority("ROLE_EMPLOYEE"));
             auths.addAll(perms.stream().map(SimpleGrantedAuthority::new).toList());
             return auths;
         } else {
-            List<GrantedAuthority> auths = new ArrayList<>();
-            auths.add(new SimpleGrantedAuthority("ROLE_USER"));
-            return auths;
+            throw new IllegalStateException("unauthenticated");
         }
     }
 }

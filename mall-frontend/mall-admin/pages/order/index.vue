@@ -1,30 +1,23 @@
 <template>
-  <AdminLayout activeMenu="home">
+  <AdminLayout activeMenu="order">
     <div class="placeholder">
       <el-card shadow="hover" class="card">
-        <div class="card-title">首页</div>
-        <div class="card-desc">仪表盘与概览占位</div>
+        <div class="card-title">订单管理</div>
+        <div class="card-desc">订单查询与发货流程占位</div>
       </el-card>
     </div>
   </AdminLayout>
-  
 </template>
 
 <script>
-  import { useAuthStore } from '../../store/auth'
   import AdminLayout from '../../components/AdminLayout.vue'
+  import { useAuthStore } from '../../store/auth'
   export default {
-    data() { return {} },
+    components: { AdminLayout },
     onLoad() {
-      const auth = useAuthStore()
-      auth.init()
-      if (!auth.token) {
-        uni.reLaunch({ url: '/pages/login/login' })
-      }
-    },
-    methods: {
-    },
-    components: { AdminLayout }
+      const auth = useAuthStore(); auth.init();
+      if (!auth.token) uni.reLaunch({ url: '/pages/login/login' })
+    }
   }
 </script>
 

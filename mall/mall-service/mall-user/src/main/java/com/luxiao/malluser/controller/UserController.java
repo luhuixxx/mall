@@ -3,6 +3,7 @@ package com.luxiao.malluser.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.luxiao.mallmodel.user.User;
 import com.luxiao.mallcommon.api.ApiResponse;
+import com.luxiao.mallsecurity.crypto.RsaCrypto;
 import com.luxiao.malluser.dto.UserLoginReq;
 import com.luxiao.malluser.dto.LoginResp;
 import com.luxiao.malluser.dto.UserRegisterReq;
@@ -21,9 +22,17 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
+    private final RsaCrypto rsaCrypto;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, RsaCrypto rsaCrypto) {
         this.userService = userService;
+        this.rsaCrypto = rsaCrypto;
+    }
+
+    @GetMapping("/public-key")
+    @Operation(summary = "获取RSA公钥")
+    public ResponseEntity<ApiResponse<String>> publicKey() {
+        return ResponseEntity.ok(ApiResponse.ok(rsaCrypto.getPublicKeyPem()));
     }
 
     @PostMapping("/register")

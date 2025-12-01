@@ -13,14 +13,6 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="jdbc:mysql://192.168.139.50:3306/mall_product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" group="​MallProductApplication" uuid="d3eaa57b-d471-448a-a68a-2ca2acfd9680">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.139.50:3306/mall_product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="0@192.168.139.50" uuid="85331db4-82fe-461c-943b-cd5b02dafedf">
       <driver-ref>redis</driver-ref>
       <synchronize>true</synchronize>
@@ -33,7 +25,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" group="​MallUserApplication" uuid="4fbe3c36-8309-4ac0-8f0c-e1be5ea826e4">
+    <data-source source="LOCAL" name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" group="​MallUserApplication" uuid="813974f0-acd7-4968-bde4-3e08f4e2f26c">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
