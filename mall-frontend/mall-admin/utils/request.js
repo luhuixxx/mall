@@ -31,6 +31,11 @@ function request(method, url, data = undefined, options = {}) {
   if (token && !isWhitelisted(url)) {
     finalHeaders['Authorization'] = 'Bearer ' + token
   }
+  if (url.startsWith('/api/product/') && method !== 'GET') {
+    finalHeaders['X-Auth-Identity'] = 'EMPLOYEE'
+    const uid = auth?.employee?.id
+    if (uid) finalHeaders['X-Auth-UserId'] = String(uid)
+  }
   return new Promise((resolve, reject) => {
     const timer = setTimeout(() => {}, TIMEOUT)
     uni.request({
@@ -72,3 +77,5 @@ export default {
   put(url, data, options) { return request('PUT', url, data, options) },
   delete(url, data, options) { return request('DELETE', url, data, options) }
 }
+
+export function getBaseUrl() { return BASE_URL }

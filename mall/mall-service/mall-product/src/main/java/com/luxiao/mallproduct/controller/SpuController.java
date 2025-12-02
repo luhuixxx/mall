@@ -6,12 +6,15 @@ import com.luxiao.mallcommon.api.ApiResponse;
 import com.luxiao.mallproduct.dto.CreateSpuReq;
 import com.luxiao.mallproduct.dto.UpdateSpuReq;
 import com.luxiao.mallproduct.service.SpuService;
+import com.luxiao.mallproduct.service.storage.MinioStorageService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/product/spu")
@@ -19,19 +22,26 @@ import org.springframework.web.bind.annotation.*;
 public class SpuController {
 
     private final SpuService spuService;
+    private final MinioStorageService storageService;
 
-    public SpuController(SpuService spuService) {
+    public SpuController(SpuService spuService, MinioStorageService storageService) {
         this.spuService = spuService;
+        this.storageService = storageService;
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @PreAuthorize("hasAuthority('product:write')")
-    @Operation(summary = "创建SPU")
-    public ResponseEntity<ApiResponse<Spu>> create(@Valid @RequestBody CreateSpuReq req) {
+    @Operation(summary = "创建SPU（图片上传）")
+    public ResponseEntity<ApiResponse<Spu>> create(@Valid @ModelAttribute CreateSpuReq req,
+                                                   @RequestPart("image") MultipartFile image) {
+        if (image == null || image.isEmpty()) {
+            throw new IllegalArgumentException("图片文件不能为空");
+        }
         Spu spu = new Spu();
         spu.setName(req.getName());
         spu.setDescription(req.getDescription());
-        spu.setImageUrl(req.getImageUrl());
+        String imageUrl = storageService.uploadImage(image, "spu");
+        spu.setImageUrl(imageUrl);
         spuService.save(spu);
         return ResponseEntity.ok(ApiResponse.ok(spu));
     }

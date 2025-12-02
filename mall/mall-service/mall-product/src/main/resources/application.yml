@@ -1,5 +1,5 @@
 server:
-  port: 51803
+  port: 51806
 spring:
   application:
     name: mall-product
@@ -9,6 +9,7 @@ spring:
       - nacos:mybatisplus
       - nacos:redis
       - nacos:security
+      - nacos:minio
   cloud:
     nacos:
       config:
