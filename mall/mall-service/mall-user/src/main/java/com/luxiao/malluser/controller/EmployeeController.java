@@ -9,6 +9,7 @@ import com.luxiao.malluser.dto.EmployeeLoginResp;
 import com.luxiao.malluser.service.EmployeeService;
 import com.luxiao.malluser.dto.EmployeeRegisterReq;
 import com.luxiao.malluser.dto.EmployeeUpdateReq;
+import com.luxiao.malluser.vo.EmployeeVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -47,7 +48,7 @@ public class EmployeeController {
     @GetMapping
     @Operation(summary = "分页查询员工")
     @PreAuthorize("hasRole('EMPLOYEE')")
-    public ResponseEntity<ApiResponse<Page<Employee>>> page(@RequestParam(defaultValue = "1") int page,
+    public ResponseEntity<ApiResponse<Page<EmployeeVO>>> page(@RequestParam(defaultValue = "1") int page,
                                                            @RequestParam(defaultValue = "10") int size,
                                                            @RequestParam(required = false) String username) {
         return ResponseEntity.ok(ApiResponse.ok(employeeService.pageEmployees(page, size, username)));

@@ -14,9 +14,10 @@
             </div>
           </template>
           <el-table :data="employees" height="420">
-			   <el-table-column prop="id" label="用户ID" width="160" />
+            <el-table-column prop="id" label="ID" width="80" />
             <el-table-column prop="username" label="用户名" width="200" />
             <el-table-column prop="createdTime" label="创建时间" />
+            <el-table-column prop="roleName" label="角色" />
             <el-table-column label="操作" width="300">
               <template #default="{ row }">
                 <el-button size="small" @click="openEditEmp(row)">修改</el-button>
@@ -53,7 +54,6 @@
                 </div>
               </template>
               <el-table :data="roles" height="360" @row-click="selectRole" highlight-current-row>
-				 
                 <el-table-column prop="name" label="角色名" width="160" />
                 <el-table-column prop="description" label="描述" />
                 <el-table-column label="操作" width="180">
@@ -132,7 +132,7 @@
                 <el-button @click="fetchEmployeePerms">查询权限</el-button>
               </div>
               <div class="mt12">
-                <el-tag v-for="p in employeePerms" :key="p.id" class="mr8 mb8" type="info">{{ p.description || p.pers }}</el-tag>
+                <el-tag v-for="p in employeePerms" :key="p.id" class="mr8 mb8" type="info">{{ p.description || p.perms }}</el-tag>
               </div>
             </el-card>
           </el-col>
@@ -183,7 +183,7 @@
     </el-dialog>
 
     <el-dialog v-model="empResetDialog.visible" :title="empResetDialog.title" width="420px">
-      <div class="dialog-body">确认为该员工重置密码？该操作将由后端生成新的密码。</div>
+      <div class="dialog-body">确认为该员工重置密码？</div>
       <template #footer>
         <el-button @click="empResetDialog.visible=false">取消</el-button>
         <el-button type="primary" @click="saveResetPwd">确认</el-button>

@@ -1,5 +1,6 @@
 package com.luxiao.malluser.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -20,6 +21,7 @@ import com.luxiao.malluser.mapper.PermissionMapper;
 import com.luxiao.malluser.service.EmployeeService;
 import com.alibaba.fastjson2.JSON;
 import com.luxiao.mallsecurity.crypto.RsaCrypto;
+import com.luxiao.malluser.vo.EmployeeVO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -34,6 +36,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import com.luxiao.malluser.vo.EmployeeVO;
 
 @Service
 public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> implements EmployeeService {
@@ -88,12 +91,27 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     }
 
     @Override
-    public Page<Employee> pageEmployees(int page, int size, String username) {
+    public Page<EmployeeVO> pageEmployees(int page, int size, String username) {
         LambdaQueryWrapper<Employee> qw = new LambdaQueryWrapper<>();
         qw.like(username != null && !username.isBlank(), Employee::getUsername, username);
         Page<Employee> p = this.page(Page.of(page, size), qw);
-        p.getRecords().forEach(e -> e.setPassword(null));
-        return p;
+        List<EmployeeVO> vos = p.getRecords().stream().map(e -> {
+            EmployeeVO vo = new EmployeeVO();
+            vo.setId(e.getId());
+            vo.setUsername(e.getUsername());
+            vo.setPassword(null);
+            vo.setCreatedTime(e.getCreatedTime());
+            vo.setUpdatedTime(e.getUpdatedTime());
+            vo.setCreatedUser(e.getCreatedUser());
+            vo.setUpdatedUser(e.getUpdatedUser());
+            List<String> roleNames = getRoleNames(e.getId());
+            vo.setRoleName(roleNames.isEmpty() ? null : String.join(", ", roleNames));
+            return vo;
+        }).toList();
+        Page<EmployeeVO> result = Page.of(page, size);
+        result.setTotal(p.getTotal());
+        result.setRecords(vos);
+        return result;
     }
 
     @Override

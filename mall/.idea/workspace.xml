@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-admin/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-admin/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SpuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/vo/EmployeeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +133,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallProductApplication">
+  <component name="RunManager" selected="Spring Boot.MallUserApplication">
     <configuration name="MallUserApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luxiao.malluser.MallUserApplicationTests" />
       <module name="mall-user" />
@@ -215,7 +211,7 @@
       <workItem from="1764415487888" duration="7201000" />
       <workItem from="1764506182378" duration="7084000" />
       <workItem from="1764555009433" duration="15633000" />
-      <workItem from="1764664711086" duration="6641000" />
+      <workItem from="1764664711086" duration="6995000" />
     </task>
     <task id="LOCAL-00001" summary="更新user，security，gateway模块">
       <option name="closed" value="true" />
