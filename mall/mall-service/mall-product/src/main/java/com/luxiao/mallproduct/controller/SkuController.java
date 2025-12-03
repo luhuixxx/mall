@@ -85,4 +85,3 @@ public class SkuController {
         return ResponseEntity.ok(ApiResponse.ok(null));
     }
 }
-
