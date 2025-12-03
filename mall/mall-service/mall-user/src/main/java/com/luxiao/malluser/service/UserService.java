@@ -7,6 +7,7 @@ import com.luxiao.malluser.dto.UserLoginReq;
 import com.luxiao.malluser.dto.LoginResp;
 import com.luxiao.malluser.dto.UserRegisterReq;
 import com.luxiao.malluser.dto.UserUpdateReq;
+import com.luxiao.malluser.dto.UserChangePasswordReq;
 
 public interface UserService extends IService<User> {
 
@@ -17,4 +18,8 @@ public interface UserService extends IService<User> {
     User updateProfile(Long id, UserUpdateReq req);
 
     Page<User> pageUsers(int page, int size, String username, String email);
+
+    void changePassword(Long id, UserChangePasswordReq req);
+
+    void resetPassword(Long id);
 }

@@ -13,8 +13,18 @@ app.$mount()
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
+import { createPinia } from 'pinia'
+import uviewPlus  from 'uview-plus'
+import { useAuthStore } from './store/auth'
+import { setupAuthGuard } from './utils/guard'
 export function createApp() {
   const app = createSSRApp(App)
+  const pinia = createPinia()
+  app.use(pinia)
+  app.use(uviewPlus)
+  const auth = useAuthStore()
+  auth.init()
+  setupAuthGuard(app)
   return {
     app
   }

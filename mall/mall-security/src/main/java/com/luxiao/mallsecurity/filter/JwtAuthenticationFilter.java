@@ -74,6 +74,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             auths.add(new SimpleGrantedAuthority("ROLE_EMPLOYEE"));
             auths.addAll(perms.stream().map(SimpleGrantedAuthority::new).toList());
             return auths;
+        } else if ("USER".equalsIgnoreCase(identity)) {
+            String permsJson = stringRedisTemplate.opsForValue().get("auth:user:" + userId + ":perms");
+            List<GrantedAuthority> auths = new ArrayList<>();
+            auths.add(new SimpleGrantedAuthority("ROLE_USER"));
+            if (permsJson != null) {
+                List<String> perms = new ObjectMapper().readValue(permsJson, new TypeReference<List<String>>() {});
+                auths.addAll(perms.stream().map(SimpleGrantedAuthority::new).toList());
+            }
+            return auths;
         } else {
             throw new IllegalStateException("unauthenticated");
         }

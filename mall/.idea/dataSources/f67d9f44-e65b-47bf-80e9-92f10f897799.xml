@@ -1078,25 +1078,25 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="289" parent="1" name="mall_order">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.07:19:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="mall_product">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.07:19:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="mall_shopping_cart">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.07:19:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="mall_user">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.07:19:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="mysql">
@@ -1105,7 +1105,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="294" parent="1" name="nacos">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-01.04:09:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.07:19:07</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="performance_schema">
@@ -1512,7 +1512,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="365" parent="305" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <Comment>主键ID</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1783,7 +1783,7 @@ role_id</ColNames>
       <UnderlyingIndexName>uk_employee_role</UnderlyingIndexName>
     </key>
     <column id="411" parent="309" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <Comment>主键ID</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1907,7 +1907,7 @@ role_id</ColNames>
       <UnderlyingIndexName>uk_name</UnderlyingIndexName>
     </key>
     <column id="433" parent="311" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>8</AutoIncrement>
       <Comment>主键ID</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1970,7 +1970,7 @@ permission_id</ColNames>
       <UnderlyingIndexName>uk_role_permission</UnderlyingIndexName>
     </key>
     <column id="444" parent="312" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <Comment>主键ID</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2045,7 +2045,7 @@ permission_id</ColNames>
       <UnderlyingIndexName>uk_username</UnderlyingIndexName>
     </key>
     <column id="457" parent="313" name="id">
-      <AutoIncrement>17</AutoIncrement>
+      <AutoIncrement>23</AutoIncrement>
       <Comment>id</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2567,7 +2567,7 @@ tag_type</ColNames>
       <StoredType>bigint unsigned|0s</StoredType>
     </column>
     <column id="550" parent="319" name="nid">
-      <AutoIncrement>18</AutoIncrement>
+      <AutoIncrement>24</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint unsigned|0s</StoredType>
@@ -2787,7 +2787,7 @@ role</ColNames>
       <UnderlyingIndexName>uk_tenant_id</UnderlyingIndexName>
     </key>
     <column id="591" parent="323" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>

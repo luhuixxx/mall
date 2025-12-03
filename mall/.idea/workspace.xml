@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/vo/EmployeeVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-admin/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-admin/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85331db4-82fe-461c-943b-cd5b02dafedf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85331db4-82fe-461c-943b-cd5b02dafedf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/vo/EmployeeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/vo/EmployeeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/com/luxiao/mallservice/MallServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/src/test/java/com/luxiao/mallservice/MallServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +137,7 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="MallGatewayApplication" value="STOPPED" />
+              <entry key="MallGatewayApplication" value="FAILED" />
               <entry key="MallOrderApplication" value="STOPPED" />
               <entry key="MallProductApplication" value="STOPPED" />
               <entry key="MallShoppingcartApplication" value="STOPPED" />
@@ -211,7 +226,8 @@
       <workItem from="1764415487888" duration="7201000" />
       <workItem from="1764506182378" duration="7084000" />
       <workItem from="1764555009433" duration="15633000" />
-      <workItem from="1764664711086" duration="6995000" />
+      <workItem from="1764664711086" duration="7661000" />
+      <workItem from="1764734365161" duration="5388000" />
     </task>
     <task id="LOCAL-00001" summary="更新user，security，gateway模块">
       <option name="closed" value="true" />

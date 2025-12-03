@@ -2,7 +2,7 @@ import { useAuthStore } from '../store/auth'
 
 const BASE_URL = 'http://localhost:52000'
 const TIMEOUT = 15000
-const whitelist = ['/api/security/public-key', '/api/employee/public-key', '/api/employee/login']
+const whitelist = ['/api/security/public-key', '/api/user/register', '/api/user/login']
 
 function toQuery(params = {}) {
   const entries = Object.entries(params).filter(([_, v]) => v !== undefined && v !== null && v !== '')
@@ -31,11 +31,7 @@ function request(method, url, data = undefined, options = {}) {
   if (token && !isWhitelisted(url)) {
     finalHeaders['Authorization'] = 'Bearer ' + token
   }
-  if (url.startsWith('/api/product/') && method !== 'GET') {
-    finalHeaders['X-Auth-Identity'] = 'EMPLOYEE'
-    const uid = auth?.employee?.id
-    if (uid) finalHeaders['X-Auth-UserId'] = String(uid)
-  }
+  console.log('Request:', method, fullUrl, finalHeaders, data)
   return new Promise((resolve, reject) => {
     const timer = setTimeout(() => {}, TIMEOUT)
     uni.request({
@@ -44,6 +40,7 @@ function request(method, url, data = undefined, options = {}) {
       header: finalHeaders,
       data: method === 'GET' ? undefined : data,
       success: (res) => {
+        // console.log('Request success:', res)
         clearTimeout(timer)
         const status = res.statusCode
         const body = res.data

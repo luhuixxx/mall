@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import com.luxiao.malluser.dto.UserRegisterReq;
 import com.luxiao.malluser.dto.UserUpdateReq;
+import com.luxiao.malluser.dto.UserChangePasswordReq;
 import com.luxiao.malluser.mapper.UserMapper;
 import com.luxiao.malluser.service.UserService;
 import org.springframework.stereotype.Service;
@@ -100,6 +101,33 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         Page<User> p = this.page(Page.of(page, size), qw);
         p.getRecords().forEach(u -> u.setPassword(null));
         return p;
+    }
+
+    @Override
+    @Transactional
+    public void changePassword(Long id, UserChangePasswordReq req) {
+        User u = this.getById(id);
+        if (u == null) {
+            throw new IllegalArgumentException("用户不存在");
+        }
+        String oldRaw = rsaCrypto.decrypt(req.getOldPassword());
+        String newRaw = rsaCrypto.decrypt(req.getNewPassword());
+        String oldEncoded = sha256(oldRaw);
+        if (!oldEncoded.equals(u.getPassword())) {
+            throw new IllegalArgumentException("原密码不正确");
+        }
+        u.setPassword(sha256(newRaw));
+        this.updateById(u);
+    }
+
+    @Override
+    public void resetPassword(Long id) {
+        User u = this.getById(id);
+        if (u == null) {
+            throw new IllegalArgumentException("用户不存在");
+        }
+        u.setPassword(sha256("123456"));
+        this.updateById(u);
     }
 
     private String sha256(String raw) {

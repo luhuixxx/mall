@@ -8,6 +8,7 @@ import com.luxiao.malluser.dto.UserLoginReq;
 import com.luxiao.malluser.dto.LoginResp;
 import com.luxiao.malluser.dto.UserRegisterReq;
 import com.luxiao.malluser.dto.UserUpdateReq;
+import com.luxiao.malluser.dto.UserChangePasswordReq;
 import com.luxiao.malluser.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,17 +23,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-    private final RsaCrypto rsaCrypto;
 
-    public UserController(UserService userService, RsaCrypto rsaCrypto) {
+    public UserController(UserService userService) {
         this.userService = userService;
-        this.rsaCrypto = rsaCrypto;
-    }
-
-    @GetMapping("/public-key")
-    @Operation(summary = "获取RSA公钥")
-    public ResponseEntity<ApiResponse<String>> publicKey() {
-        return ResponseEntity.ok(ApiResponse.ok(rsaCrypto.getPublicKeyPem()));
     }
 
     @PostMapping("/register")
@@ -74,5 +67,22 @@ public class UserController {
                                            @RequestParam(required = false) String email) {
         return ResponseEntity.ok(ApiResponse.ok(userService.pageUsers(page, size, username, email)));
     }
-}
 
+    @PutMapping("/{id}/password")
+    @Operation(summary = "修改密码")
+    @PreAuthorize("hasAnyRole('USER','EMPLOYEE')")
+    public ResponseEntity<ApiResponse<Void>> changePassword(@PathVariable Long id, @Valid @RequestBody UserChangePasswordReq req) {
+        userService.changePassword(id, req);
+        return ResponseEntity.ok(ApiResponse.ok(null));
+    }
+
+    @PutMapping("/{id}/reset-password")
+    @Operation(summary = "重置密码")
+    @PreAuthorize("hasAnyRole('EMPLOYEE')")
+    public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long id) {
+        userService.resetPassword(id);
+        return ResponseEntity.ok(ApiResponse.ok(null));
+    }
+
+
+}

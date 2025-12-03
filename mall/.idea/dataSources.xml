@@ -25,21 +25,5 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="jdbc:mysql://192.168.139.50:3306/mall_product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" group="​MallProductApplication" uuid="d2b6055c-c045-41a1-a9fa-050d3b2827a2">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.139.50:3306/mall_product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" group="​MallUserApplication" uuid="cbae99e2-ef46-4802-ba6c-501bbee34108">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.139.50:3306/mall_user?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
   </component>
 </project>

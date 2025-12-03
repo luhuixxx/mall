@@ -1,5 +1,5 @@
 server:
-  port: 51800
+  port: 52000
 spring:
   application:
     name: mall-gateway

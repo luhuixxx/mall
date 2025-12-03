@@ -1,5 +1,5 @@
 server:
-  port: 51801
+  port: 52001
 spring:
   application:
     name: mall-user
