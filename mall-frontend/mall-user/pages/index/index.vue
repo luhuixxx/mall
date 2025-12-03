@@ -4,8 +4,9 @@
       <u-swiper :list="banners" height="220" indicator indicatorMode="line" radius="16"></u-swiper>
     </view>
     <view class="toolbar">
-      <u-input v-model="query.name" placeholder="搜索商品名称" clearable @confirm="onSearch" @clear="onClear" border="surround"></u-input>
-      <u-button type="primary" text="搜索" @click="onSearch" shape="circle" icon="search"></u-button>
+      <u-input class="search-input" v-model="query.name" placeholder="搜索商品名称" clearable @confirm="onSearch"
+        @clear="onClear" border="surround"></u-input>
+      <u-button class="search-btn" type="primary" text="搜索" @click="onSearch" shape="circle" icon="search"></u-button>
     </view>
     <scroll-view class="list" scroll-y @scrolltolower="loadMore">
       <view class="cards">
@@ -51,7 +52,8 @@
         </view>
         <view class="sku-list">
           <u-radio-group v-model="selectedSkuId">
-            <u-radio v-for="sku in skus" :key="sku.id" :name="sku.id" :label="skuLabel(sku)" :disabled="sku.stockQuantity <= 0" />
+            <u-radio v-for="sku in skus" :key="sku.id" :name="sku.id" :label="skuLabel(sku)"
+              :disabled="sku.stockQuantity <= 0" />
           </u-radio-group>
         </view>
         <view class="sku-actions">
@@ -65,7 +67,7 @@
 <script>
 import { getSpuPage, getSkusBySpuId } from '../../api/product'
 export default {
-  components: { },
+  components: {},
   data() {
     return {
       query: { page: 1, size: 10, name: '' },
@@ -162,38 +164,181 @@ export default {
 </script>
 
 <style>
-.page { display: flex; flex-direction: column; height: 100vh; }
-.banner { padding: 12rpx 16rpx; background: linear-gradient(180deg, #f0f5ff, #ffffff); }
-.toolbar { display: flex; gap: 16rpx; padding: 16rpx; background: #fff; border-bottom: 1px solid #eee; }
-.list { flex: 1; }
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16rpx; padding: 16rpx; }
-.card { background: #fff; border-radius: 16rpx; overflow: hidden; box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.06); transition: transform .2s ease; height: 380rpx; display: flex; flex-direction: column; }
-.card:active { transform: scale(0.98); }
-.card-img { width: 100%; height: 220rpx; background: #f6f6f6; }
-.card-body { padding: 12rpx; flex: 1; display: flex; flex-direction: column; }
-.card-title { font-size: 28rpx; font-weight: 600; color: #333; }
-.card-desc { font-size: 24rpx; color: #666; margin-top: 8rpx; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.card-meta { margin-top: 8rpx; font-size: 22rpx; color: #999; display: flex; justify-content: space-between; align-items: center; }
-.price { color: #e54d42; font-weight: 600; }
-.sales { color: #999; }
-.loading { padding: 24rpx; grid-column: 1 / -1; display: flex; justify-content: center; }
-.empty { padding: 40rpx; grid-column: 1 / -1; }
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-.detail { width: 600rpx; max-width: 86vw; background: #fff; border-radius: 16rpx; overflow: hidden; }
-.detail-img { width: 100%; height: 300rpx; background: #f6f6f6; }
-.detail-body { padding: 16rpx; display: flex; flex-direction: column; gap: 12rpx; }
-.detail-title { font-size: 32rpx; font-weight: 600; color: #333; }
-.detail-desc { font-size: 26rpx; color: #666; }
-.detail-meta { font-size: 24rpx; color: #999; }
+.banner {
+  padding: 12rpx 16rpx;
+  background: linear-gradient(180deg, #f0f5ff, #ffffff);
+}
 
-.sku-panel { padding: 16rpx; background: #fff; }
-.sku-header { font-size: 28rpx; font-weight: 600; margin-bottom: 12rpx; }
-.sku-list { padding: 8rpx 0; }
-.sku-actions { padding-top: 12rpx; }
+.toolbar {
+  display: flex;
+  gap: 16rpx;
+  padding: 16rpx;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.toolbar .search-input { flex: 1 1 auto; min-width: 0; }
+
+.toolbar .search-btn { flex: 0 0 180rpx; }
+
+.list {
+  flex: 1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+  padding: 16rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+  transition: transform .2s ease;
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card-img {
+  width: 100%;
+  height: 220rpx;
+  background: #f6f6f6;
+}
+
+.card-body {
+  padding: 12rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-desc {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 8rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-meta {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #e54d42;
+  font-weight: 600;
+}
+
+.sales {
+  color: #999;
+}
+
+.loading {
+  padding: 24rpx;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.empty {
+  padding: 40rpx;
+  grid-column: 1 / -1;
+}
+
+.detail {
+  width: 600rpx;
+  max-width: 86vw;
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.detail-img {
+  width: 100%;
+  height: 300rpx;
+  background: #f6f6f6;
+}
+
+.detail-body {
+  padding: 16rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.detail-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.detail-desc {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.detail-meta {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.sku-panel {
+  padding: 16rpx;
+  background: #fff;
+}
+
+.sku-header {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+
+.sku-list {
+  padding: 8rpx 0;
+}
+
+.sku-actions {
+  padding-top: 12rpx;
+}
 
 @media (min-width: 1024px) {
-  .cards { grid-template-columns: repeat(4, 1fr); }
-  .card { height: 420rpx; }
-  .card-img { height: 260rpx; }
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    height: 420rpx;
+  }
+
+  .card-img {
+    height: 260rpx;
+  }
 }
 </style>

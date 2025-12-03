@@ -31,7 +31,6 @@ function request(method, url, data = undefined, options = {}) {
   if (token && !isWhitelisted(url)) {
     finalHeaders['Authorization'] = 'Bearer ' + token
   }
-  console.log('Request:', method, fullUrl, finalHeaders, data)
   return new Promise((resolve, reject) => {
     const timer = setTimeout(() => {}, TIMEOUT)
     uni.request({
@@ -40,7 +39,6 @@ function request(method, url, data = undefined, options = {}) {
       header: finalHeaders,
       data: method === 'GET' ? undefined : data,
       success: (res) => {
-        // console.log('Request success:', res)
         clearTimeout(timer)
         const status = res.statusCode
         const body = res.data

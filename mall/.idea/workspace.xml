@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SkuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/index/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/utils/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,7 @@
       <workItem from="1764506182378" duration="7084000" />
       <workItem from="1764555009433" duration="15633000" />
       <workItem from="1764664711086" duration="7661000" />
-      <workItem from="1764734365161" duration="6277000" />
+      <workItem from="1764734365161" duration="7580000" />
     </task>
     <task id="LOCAL-00001" summary="更新user，security，gateway模块">
       <option name="closed" value="true" />

@@ -40,5 +40,10 @@
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="jdbc:mysql://192.168.139.50:3306/mall_product?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC [DEBUG]" uuid="d9d344e1-4c78-43f9-9ff0-57052590a04c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
