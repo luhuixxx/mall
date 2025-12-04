@@ -31,11 +31,11 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/api/product/**").hasAuthority("product:write")
-                        .requestMatchers(HttpMethod.PUT, "/api/product/**").hasAuthority("product:write")
-                        .requestMatchers(HttpMethod.DELETE, "/api/product/**").hasAuthority("product:write")
+                        .requestMatchers(HttpMethod.POST, "/api/product/**").hasAnyAuthority("product:write", "ROLE_INTERNAL_SERVICE")
+                        .requestMatchers(HttpMethod.PUT, "/api/product/**").hasAnyAuthority("product:write", "ROLE_INTERNAL_SERVICE")
+                        .requestMatchers(HttpMethod.DELETE, "/api/product/**").hasAnyAuthority("product:write", "ROLE_INTERNAL_SERVICE")
                         .requestMatchers("/api/employee/**").hasRole("EMPLOYEE")
-                        .requestMatchers("/api/order/**", "/api/shoppingcart/**").hasRole("USER")
+                        .requestMatchers("/api/order/**", "/api/shoppingcart/**").hasAnyRole("USER", "INTERNAL_SERVICE","EMPLOYEE")
                         .requestMatchers(whiteList).permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/product/**").permitAll()
                         .anyRequest().authenticated()

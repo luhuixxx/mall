@@ -5,6 +5,7 @@ import com.luxiao.mallmodel.product.Spu;
 import com.luxiao.mallcommon.api.ApiResponse;
 import com.luxiao.mallproduct.dto.CreateSpuReq;
 import com.luxiao.mallproduct.dto.UpdateSpuReq;
+import com.luxiao.mallmodel.product.dto.UpdateSpuSalesReq;
 import com.luxiao.mallproduct.service.SpuService;
 import com.luxiao.mallproduct.service.storage.MinioStorageService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -80,6 +81,22 @@ public class SpuController {
                                           @RequestParam(defaultValue = "10") int size,
                                           @RequestParam(required = false) String name) {
         return ResponseEntity.ok(ApiResponse.ok(spuService.pageSpu(page, size, name)));
+    }
+
+    @PutMapping("/{id}/sales")
+    @PreAuthorize("hasAnyRole('INTERNAL_SERVICE')")
+    @Operation(summary = "调整SPU销量")
+    public ResponseEntity<ApiResponse<Void>> adjustSales(@PathVariable Long id, @Valid @RequestBody UpdateSpuSalesReq req) {
+        spuService.adjustSales(id, req.getDelta());
+        return ResponseEntity.ok(ApiResponse.ok(null));
+    }
+
+    @GetMapping("/stats/top")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    @Operation(summary = "Top销量SPU")
+    public ResponseEntity<ApiResponse<java.util.List<Spu>>> top(@RequestParam(defaultValue = "10") int limit) {
+        com.baomidou.mybatisplus.extension.plugins.pagination.Page<Spu> p = spuService.page(com.baomidou.mybatisplus.extension.plugins.pagination.Page.of(1, limit), new com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper<Spu>().orderByDesc(Spu::getSalesCount));
+        return ResponseEntity.ok(ApiResponse.ok(p.getRecords()));
     }
 }
 

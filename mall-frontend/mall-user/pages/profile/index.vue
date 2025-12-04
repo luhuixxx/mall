@@ -23,6 +23,10 @@
             <view class="left"><u-icon name="email-fill" size="32rpx" color="#999"></u-icon><text class="label">邮箱</text></view>
             <text class="value">{{ user?.email || '' }}</text>
           </view>
+          <view class="row">
+            <view class="left"><u-icon name="rmb-circle-fill" size="32rpx" color="#999"></u-icon><text class="label">余额</text></view>
+            <text class="value">¥{{ user?.balance != null ? user.balance : '' }}</text>
+          </view>
         </view>
         <view class="actions">
           <u-button type="primary" text="更新资料" @click="openUpdate" />
@@ -92,6 +96,10 @@ export default {
   computed: {
     auth() { return useAuthStore() },
     user() { return this.auth.user }
+  },
+  onShow() {
+    const id = this.auth.user?.id
+    if (id) this.auth.loadUser(id)
   },
   methods: {
     openUpdate() {

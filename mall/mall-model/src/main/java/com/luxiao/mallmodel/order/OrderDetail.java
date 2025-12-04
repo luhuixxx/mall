@@ -24,6 +24,12 @@ public class OrderDetail {
 
     private BigDecimal price;
 
+    private String specification;
+
+    private String spuName;
+
+    private String imgUrl;
+
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createdTime;
 

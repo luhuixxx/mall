@@ -1,11 +1,6 @@
 <template>
   <AdminLayout activeMenu="home">
-    <div class="placeholder">
-      <el-card shadow="hover" class="card">
-        <div class="card-title">首页</div>
-        <div class="card-desc">仪表盘与概览占位</div>
-      </el-card>
-    </div>
+    <Dashboard />
   </AdminLayout>
   
 </template>
@@ -13,6 +8,7 @@
 <script>
   import { useAuthStore } from '../../store/auth'
   import AdminLayout from '../../components/AdminLayout.vue'
+  import Dashboard from '../../components/Dashboard.vue'
   export default {
     data() { return {} },
     onLoad() {
@@ -22,15 +18,10 @@
         uni.reLaunch({ url: '/pages/login/login' })
       }
     },
-    methods: {
-    },
-    components: { AdminLayout }
+    components: { AdminLayout, Dashboard }
   }
 </script>
 
 <style>
-  .placeholder { padding: 16px }
-  .card { max-width: 960px; margin: 24px auto }
-  .card-title { font-size: 20px; font-weight: 600; margin-bottom: 8px }
-  .card-desc { color: #606266 }
+  
 </style>

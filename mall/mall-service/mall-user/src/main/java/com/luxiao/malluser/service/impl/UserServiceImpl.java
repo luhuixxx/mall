@@ -14,12 +14,15 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import com.luxiao.malluser.dto.UserRegisterReq;
 import com.luxiao.malluser.dto.UserUpdateReq;
 import com.luxiao.malluser.dto.UserChangePasswordReq;
+import com.luxiao.malluser.dto.UserUpdateBalanceReq;
+import com.luxiao.mallmodel.user.dto.UserAdjustBalanceReq;
 import com.luxiao.malluser.mapper.UserMapper;
 import com.luxiao.malluser.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.luxiao.mallsecurity.crypto.RsaCrypto;
 
+import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -55,6 +58,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String raw = rsaCrypto.decrypt(req.getPassword());
         u.setPassword(sha256(raw));
         u.setEmail(req.getEmail());
+        u.setBalance(BigDecimal.ZERO);
         this.save(u);
         u.setPassword(null);
         return u;
@@ -128,6 +132,51 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         u.setPassword(sha256("123456"));
         this.updateById(u);
+    }
+
+    @Override
+    @Transactional
+    public User updateBalance(Long id, UserUpdateBalanceReq req) {
+        User u = this.getById(id);
+        if (u == null) {
+            throw new IllegalArgumentException("用户不存在");
+        }
+        u.setBalance(req.getBalance());
+        this.updateById(u);
+        u.setPassword(null);
+        return u;
+    }
+
+    @Override
+    @Transactional
+    public User adjustBalance(Long id, UserAdjustBalanceReq req) {
+        User u = this.getById(id);
+        if (u == null) {
+            throw new IllegalArgumentException("用户不存在");
+        }
+        java.math.BigDecimal current = u.getBalance() == null ? java.math.BigDecimal.ZERO : u.getBalance();
+        java.math.BigDecimal updated = current.add(req.getDelta());
+        if (updated.compareTo(java.math.BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("余额不足");
+        }
+        u.setBalance(updated);
+        this.updateById(u);
+        u.setPassword(null);
+        return u;
+    }
+
+    @Override
+    public long countAllUsers() {
+        return this.count();
+    }
+
+    @Override
+    public long countNewUsersLast7Days() {
+        var now = java.time.LocalDateTime.now();
+        var from = now.minusDays(7);
+        com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper<User> qw = new com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper<>();
+        qw.ge(User::getCreatedTime, from);
+        return this.count(qw);
     }
 
     private String sha256(String raw) {

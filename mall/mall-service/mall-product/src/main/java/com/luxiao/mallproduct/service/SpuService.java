@@ -6,5 +6,6 @@ import com.luxiao.mallmodel.product.Spu;
 
 public interface SpuService extends IService<Spu> {
     Page<Spu> pageSpu(int page, int size, String name);
+    void adjustSales(Long id, int delta);
 }
 

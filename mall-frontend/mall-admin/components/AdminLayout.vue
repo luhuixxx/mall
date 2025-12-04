@@ -5,6 +5,7 @@
       <el-menu :default-active="activeMenu" class="menu" @select="onSelect" :collapse="collapsed">
         <el-menu-item index="home">首页</el-menu-item>
         <el-menu-item index="employee">员工管理</el-menu-item>
+        <el-menu-item index="user">用户管理</el-menu-item>
         <el-menu-item index="product">商品管理</el-menu-item>
         <el-menu-item index="order">订单管理</el-menu-item>
       </el-menu>
@@ -55,6 +56,7 @@
         const map = {
           home: '/pages/index/index',
           employee: '/pages/employee/index',
+          user: '/pages/user/index',
           product: '/pages/product/index',
           order: '/pages/order/index'
         }

@@ -18,6 +18,8 @@ public class Order {
     @TableId(type = IdType.NONE) // 订单ID不自增，由程序生成
     private Long id;
 
+    private Long userId;
+
     private String name;
 
     private String phone;

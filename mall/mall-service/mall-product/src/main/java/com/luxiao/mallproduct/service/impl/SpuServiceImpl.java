@@ -16,5 +16,20 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, Spu> implements SpuSe
         qw.like(name != null && !name.isBlank(), Spu::getName, name);
         return this.page(Page.of(page, size), qw);
     }
+
+    @Override
+    public void adjustSales(Long id, int delta) {
+        Spu spu = this.getById(id);
+        if (spu == null) {
+            throw new IllegalArgumentException("SPU不存在");
+        }
+        int current = spu.getSalesCount() == null ? 0 : spu.getSalesCount();
+        int updated = current + delta;
+        if (updated < 0) {
+            throw new IllegalArgumentException("销量不能为负数");
+        }
+        spu.setSalesCount(updated);
+        this.updateById(spu);
+    }
 }
 

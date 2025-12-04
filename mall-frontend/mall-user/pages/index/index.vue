@@ -66,6 +66,8 @@
 
 <script>
 import { getSpuPage, getSkusBySpuId } from '../../api/product'
+import { addCartItem } from '../../api/cart'
+import { useAuthStore } from '../../store/auth'
 export default {
   components: {},
   data() {
@@ -155,9 +157,22 @@ export default {
     confirmSku() {
       const sku = this.skus.find(s => s.id === this.selectedSkuId)
       if (!sku) return
-      uni.showToast({ title: `已选择：${sku.specification || sku.id}`, icon: 'none' })
-      this.closeSku()
-      this.closeDetail()
+      const auth = useAuthStore()
+      const userId = auth.user?.id
+      if (!userId) {
+        uni.showToast({ title: '请先登录', icon: 'none' })
+        return
+      }
+      const payload = { userId, skuId: sku.id, quantity: 1, imageUrl: this.currentSpu?.imageUrl || '' }
+      addCartItem(payload)
+        .then(() => {
+          uni.showToast({ title: '已加入购物车', icon: 'success' })
+          this.closeSku()
+          this.closeDetail()
+        })
+        .catch(e => {
+          uni.showToast({ title: e?.message || '加入失败', icon: 'none' })
+        })
     }
   }
 }

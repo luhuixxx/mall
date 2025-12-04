@@ -1,5 +1,5 @@
 server:
-  port: 52004
+  port: 53006
 spring:
   application:
     name: mall-shoppingcart
@@ -7,6 +7,8 @@ spring:
     import:
       - nacos:mall-shoppingcart
       - nacos:mybatisplus
+      - nacos:security
+      - nacos:redis
   cloud:
     nacos:
       config:

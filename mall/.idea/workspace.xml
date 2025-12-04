@@ -5,8 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a352e21-cda2-46ea-8a92-21a02e06d95a" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/mall-feign-api/src/main/java/com/luxiao/mallfeignapi/procuct/ProductApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/vo/SkuInfoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/dto/AddCartItemReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/dto/UpdateQuantityReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/mapper/CartItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/service/ShoppingCartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/vo/CartItemVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/cart/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/cart/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/index/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/order/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/order/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../mall-frontend/mall-user/pages/profile/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67d9f44-e65b-47bf-80e9-92f10f897799.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-feign-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-feign-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/order/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/order/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/shoppingcart/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/shoppingcart/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-security/src/main/java/com/luxiao/mallsecurity/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-order/src/main/java/com/luxiao/mallorder/MallOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-order/src/main/java/com/luxiao/mallorder/MallOrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SkuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/controller/SpuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/dto/UpdateStockReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-model/src/main/java/com/luxiao/mallmodel/product/dto/UpdateStockReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/SkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/SkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/SpuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/SpuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/impl/SkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/impl/SpuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/java/com/luxiao/mallproduct/service/impl/SpuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/MallShoppingcartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/java/com/luxiao/mallshoppingcart/MallShoppingcartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-shoppingcart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/mall-user/src/main/java/com/luxiao/malluser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +55,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -60,48 +100,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MallGatewayApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.MallOrderApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MallProductApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.MallShoppingcartApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MallUserApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.MallUserApplicationTests.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MallGatewayApplication.executor": "Run",
+    "Spring Boot.MallOrderApplication.executor": "Debug",
+    "Spring Boot.MallProductApplication.executor": "Debug",
+    "Spring Boot.MallShoppingcartApplication.executor": "Debug",
+    "Spring Boot.MallUserApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.MallUserApplicationTests.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redis&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redis",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\program\project\mall\mall\mall-service\mall-shoppingcart\src\main\java\com\luxiao\mallshoppingcart" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.luxiao.mallproduct.config" />
     </key>
@@ -120,18 +163,17 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="MallGatewayApplication" value="FAILED" />
               <entry key="MallOrderApplication" value="STOPPED" />
               <entry key="MallProductApplication" value="STOPPED" />
               <entry key="MallShoppingcartApplication" value="STOPPED" />
-              <entry key="MallUserApplication" value="FAILED" />
+              <entry key="MallUserApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallUserApplication">
+  <component name="RunManager" selected="Spring Boot.MallOrderApplication">
     <configuration name="MallUserApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luxiao.malluser.MallUserApplicationTests" />
       <module name="mall-user" />
@@ -210,7 +252,8 @@
       <workItem from="1764506182378" duration="7084000" />
       <workItem from="1764555009433" duration="15633000" />
       <workItem from="1764664711086" duration="7661000" />
-      <workItem from="1764734365161" duration="7580000" />
+      <workItem from="1764734365161" duration="23592000" />
+      <workItem from="1764807248470" duration="3789000" />
     </task>
     <task id="LOCAL-00001" summary="更新user，security，gateway模块">
       <option name="closed" value="true" />

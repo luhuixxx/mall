@@ -43,3 +43,11 @@ export function deleteSku(id) {
 export function updateSkuStock(id, payload) {
   return request.put(`/api/product/sku/${id}/stock`, payload)
 }
+
+export function getTopSpu(limit = 10) {
+  return request.get('/api/product/spu/stats/top', { params: { limit } })
+}
+
+export function getLowStockSku(threshold = 10, limit = 10) {
+  return request.get('/api/product/sku/stats/low-stock', { params: { threshold, limit } })
+}

@@ -7,6 +7,9 @@ spring:
     import:
       - nacos:mall-order
       - nacos:mybatisplus
+      - nacos:redis
+      - nacos:security
+      - nacos:rabbitmq
   cloud:
     nacos:
       config:

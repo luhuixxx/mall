@@ -3,12 +3,13 @@ package com.luxiao.malluser.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.luxiao.mallmodel.user.User;
 import com.luxiao.mallcommon.api.ApiResponse;
-import com.luxiao.mallsecurity.crypto.RsaCrypto;
+import com.luxiao.mallmodel.user.dto.UserAdjustBalanceReq;
 import com.luxiao.malluser.dto.UserLoginReq;
-import com.luxiao.malluser.dto.LoginResp;
 import com.luxiao.malluser.dto.UserRegisterReq;
 import com.luxiao.malluser.dto.UserUpdateReq;
 import com.luxiao.malluser.dto.UserChangePasswordReq;
+import com.luxiao.malluser.dto.UserUpdateBalanceReq;
+import com.luxiao.malluser.vo.UserStatsResp;
 import com.luxiao.malluser.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -82,6 +83,32 @@ public class UserController {
     public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long id) {
         userService.resetPassword(id);
         return ResponseEntity.ok(ApiResponse.ok(null));
+    }
+
+    @PutMapping("/{id}/balance")
+    @Operation(summary = "修改用户余额")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    public ResponseEntity<ApiResponse<User>> updateBalance(@PathVariable Long id, @Valid @RequestBody UserUpdateBalanceReq req) {
+        User u = userService.updateBalance(id, req);
+        return ResponseEntity.ok(ApiResponse.ok(u));
+    }
+
+    @PutMapping("/{id}/balance/adjust")
+    @Operation(summary = "调整用户余额（可正可负）")
+    @PreAuthorize("hasAnyRole('INTERNAL_SERVICE')")
+    public ResponseEntity<ApiResponse<User>> adjustBalance(@PathVariable Long id, @Valid @RequestBody UserAdjustBalanceReq req) {
+        User u = userService.adjustBalance(id, req);
+        return ResponseEntity.ok(ApiResponse.ok(u));
+    }
+
+    @GetMapping("/stats/summary")
+    @Operation(summary = "用户统计汇总")
+    @PreAuthorize("hasRole('EMPLOYEE')")
+    public ResponseEntity<ApiResponse<UserStatsResp>> userStats() {
+        UserStatsResp resp = new UserStatsResp();
+        resp.setTotalUsers(userService.countAllUsers());
+        resp.setNewUsersLast7Days(userService.countNewUsersLast7Days());
+        return ResponseEntity.ok(ApiResponse.ok(resp));
     }
 
 
